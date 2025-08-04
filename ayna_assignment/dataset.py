@@ -24,7 +24,7 @@ class PolygonColorDataset(Dataset):
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.augment = augment
-        self.resize = transforms.Resize((144, 144))  # Upscale first
+        self.resize = transforms.Resize((144, 144)) 
         self.to_tensor = transforms.ToTensor()
         self.center_crop = transforms.CenterCrop(128)
 
@@ -42,15 +42,15 @@ class PolygonColorDataset(Dataset):
 
         if self.augment:
             angle = random.uniform(-30, 30)
-            input_img = TF.rotate(input_img, angle)
+            input_img = TF.rotate(input_img, angle) #rotate
             output_img = TF.rotate(output_img, angle)
 
             if random.random() > 0.5:
-                input_img = TF.hflip(input_img)
+                input_img = TF.hflip(input_img) #horizontal_flip
                 output_img = TF.hflip(output_img)
 
             if random.random() > 0.5:
-                input_img = TF.vflip(input_img)
+                input_img = TF.vflip(input_img) #vertical_flip
                 output_img = TF.vflip(output_img)
 
         input_img = self.center_crop(input_img)
