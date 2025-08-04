@@ -3,6 +3,6 @@ This is an UNet model that takes in the input polygon image, and the desired col
 
 Clone this repo using git clone command and run it in your colab notebook. All the required imports are already present, just make sure dataset is configured correctly in your code. 
 
-for report of what this project is about, please read Project Report.pdf.
+For report on what this project is about, please go through Project Report.pdf  .
 
 -Saketh Nellutla
