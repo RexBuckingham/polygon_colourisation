@@ -1,0 +1,8 @@
+#CPU- ipynd [Tested on unseen data like nanogon and plus shapes]
+https://colab.research.google.com/drive/1LxP56doG2Rjwh-UhjiWPLFJKcShlEu9R?usp=sharing
+
+#T4-GPU- ipynb 
+https://colab.research.google.com/drive/1YSY9HfcG9zjh9heOlMHRh7uKkADT2t5V?usp=sharing
+
+#Weights and Biases (each project has different UNet architecture and different tuned runs to enhance the prediction)
+https://wandb.ai/nellutlasaketh08-mahindra-university/projects
