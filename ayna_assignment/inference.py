@@ -4,7 +4,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Import from your custom files (NOTE: Renamed 'dataset' to 'dataset_loader')
+
 from dataset_loader import color_name_to_onehot 
 from model_architecture import UNetFullFiLM 
 
@@ -25,9 +25,9 @@ def predict_film(image_path, color_name, model_path, cond_dim=8):
     checkpoint = torch.load(model_path, map_location=device)
     if isinstance(checkpoint, dict) and 'model_state_dict' in checkpoint:
         model.load_state_dict(checkpoint['model_state_dict'])
-        print(f"✅ Loaded FiLM model from epoch {checkpoint.get('epoch', 'unknown')}")
+        print(f"Loaded FiLM model from epoch {checkpoint.get('epoch', 'unknown')}")
         if 'best_val_loss' in checkpoint:
-            print(f"📊 Best validation loss: {checkpoint['best_val_loss']:.4f}")
+            print(f"Best validation loss: {checkpoint['best_val_loss']:.4f}")
     else:
         model.load_state_dict(checkpoint)
     model.eval()

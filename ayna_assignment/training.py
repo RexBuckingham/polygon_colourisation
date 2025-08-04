@@ -8,14 +8,14 @@ import os
 from dataset import PolygonColorDataset, COLOR_LIST, color_name_to_onehot 
 from unet_model import UNetFullFiLM 
 
-# Define paths from Google Drive
+
 DATASET_ROOT = "/content/drive/MyDrive/ayna_dataset"
 MODEL_SAVE_PATH = "/content/drive/MyDrive/unet_filmorg.pth"
 
-# Initialize wandb
+
 wandb.init(project="ayna-dec-film")
 
-# Select device
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Improved loss function for color segmentation
